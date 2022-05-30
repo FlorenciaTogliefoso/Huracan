@@ -5,8 +5,6 @@
 }
 
 .galeria {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
   grid-area: galeria;
 }
 
@@ -24,21 +22,34 @@ body {
 }
 
 header {
-  font-size: large;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-color: red;
+  padding: 30px;
 }
 
-nav ul li {
-  list-style: none;
+header nav {
+  width: 0%;
+  margin: 0 auto;
+}
+
+header nav ul {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav ul li {
+  list-style-type: none;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
-a {
+header nav ul li a {
   text-decoration: none;
+  color: white;
 }
 
 article, aside, .ad {
@@ -64,44 +75,32 @@ footer {
 }
 
 .main-head {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: header;
 }
 
 .content {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: contenido;
 }
 
 .main-nav {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+
   grid-area: nav;
 }
 
 .side {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: sidebar;
 }
 
 .ad {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
   grid-area: ad;
 }
 
 .galeria-grid {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
   grid-area: galeria;
 }
 
 .footer {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
+
   grid-area: footer;
 }
 

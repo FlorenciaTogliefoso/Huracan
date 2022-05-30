@@ -19,21 +19,29 @@ body{
     min-height: 100vh;
   }
   
-  header{
-    font-size: large;
-    display: grid;
-    justify-content: center;
-  
+ header{
+   background-color: red;
+   padding: 30px;
+   nav{
+     width: 0%;
+     margin: 0 auto;
+     ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    li{
+      list-style-type: none;
+      text-transform: uppercase;
+      font-weight: 400;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+
+    }
+    }
   }
-  
-  nav ul li{
-    list-style: none;
-    text-transform: uppercase;
-  }
-  
-  a{
-    text-decoration: none;
-  }
+}
   
   article, aside, .ad{
     border: 2px solid rgb(0, 0, 0);
