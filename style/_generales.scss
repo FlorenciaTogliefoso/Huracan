@@ -1,0 +1,22 @@
+header{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    nav{
+      width: 0%;
+      margin: 0 auto;
+      ul{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     li{
+       list-style-type: none;
+       text-transform: uppercase;
+       font-weight: 400;
+       a{
+         text-decoration: none;
+         color: white;
+       }
+      }
+     }
+   }
+ }

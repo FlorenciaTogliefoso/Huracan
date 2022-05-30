@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import "generales";
+
 *{
     padding: 0;
     margin: 0;
@@ -17,34 +18,6 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
- header{
-   background-color: rgb(255, 255, 255);
-   padding: 5px;
-   nav{
-     width: 0%;
-     margin: 0 auto;
-     ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    li{
-      list-style-type: none;
-      text-transform: uppercase;
-      font-weight: 400;
-      a{
-        text-decoration: none;
-        color: white;
-      }
-
-    }
-    }
-  }
-}
-  
-  article, aside, .ad{
-    border: 2px solid rgb(0, 0, 0);
   }
   
   img{

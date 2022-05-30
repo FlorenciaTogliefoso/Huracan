@@ -1,28 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-}
-
-.galeria {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  grid-area: galeria;
-}
-
-body {
-  background-image: url(../img/fondo.jpeg);
-  font-family: 'Poppins', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-}
-
 header {
   background-color: white;
   padding: 5px;
@@ -56,8 +31,28 @@ header nav ul li a {
   color: white;
 }
 
-article, aside, .ad {
-  border: 2px solid black;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.galeria {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: galeria;
+}
+
+body {
+  background-image: url(../img/fondo.jpeg);
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 img {
