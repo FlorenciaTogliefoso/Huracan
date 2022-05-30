@@ -5,6 +5,8 @@
 }
 
 .galeria {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
   grid-area: galeria;
 }
 
@@ -22,8 +24,8 @@ body {
 }
 
 header {
-  background-color: red;
-  padding: 30px;
+  background-color: white;
+  padding: 5px;
 }
 
 header nav {
@@ -32,6 +34,8 @@ header nav {
 }
 
 header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -75,32 +79,44 @@ footer {
 }
 
 .main-head {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: header;
 }
 
 .content {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: contenido;
 }
 
 .main-nav {
-
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: nav;
 }
 
 .side {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: sidebar;
 }
 
 .ad {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: ad;
 }
 
 .galeria-grid {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
   grid-area: galeria;
 }
 
 .footer {
-
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
   grid-area: footer;
 }
 
@@ -123,13 +139,7 @@ footer {
   display: -ms-grid;
   display: grid;
   gap: 20px;
-      grid-template-areas: "header"
- "nav"
- "contenido"
- "sidebar"
- "ad"
- "galeria"
- "footer";
+      grid-template-areas: "header" "nav" "contenido" "sidebar" "ad" "galeria" "footer";
 }
 
 @media (min-width: 560px) {
@@ -148,12 +158,7 @@ footer {
   .wrapper {
     -ms-grid-columns: 1fr 3fr;
         grid-template-columns: 1fr 3fr;
-        grid-template-areas: "header  header"
- "nav     nav"
- "sidebar contenido"
- "ad      ad"
- "galeria galeria"
- "footer     footer";
+        grid-template-areas: "header  header" "nav     nav" "sidebar contenido" "ad      ad" "galeria galeria" "footer     footer";
   }
   nav ul {
     display: -webkit-box;
@@ -171,11 +176,7 @@ footer {
   .wrapper {
     -ms-grid-columns: 1fr 4fr 1fr;
         grid-template-columns: 1fr 4fr 1fr;
-        grid-template-areas: "header header header"
- "nav contenido sidebar"
- "nav contenido ad"
- "galeria galeria galeria"
- "footer footer  footer";
+        grid-template-areas: "header header header" "nav contenido sidebar" "nav contenido ad" "galeria galeria galeria" "footer footer  footer";
   }
   nav ul {
     -webkit-box-orient: vertical;
@@ -202,11 +203,7 @@ footer {
   .wrapper {
     -ms-grid-columns: 1fr 4fr 1fr;
         grid-template-columns: 1fr 4fr 1fr;
-        grid-template-areas: "header header header"
- "nav contenido sidebar"
- "nav contenido ad"
- "galeria galeria galeria" 
- "footer footer footer";
+        grid-template-areas: "header header header" "nav contenido sidebar" "nav contenido ad" "galeria galeria galeria"  "footer footer footer";
   }
   a:link {
     color: white;
