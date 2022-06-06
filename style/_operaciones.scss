@@ -8,3 +8,34 @@ $redes:(
         background-color: $color ;
     } 
 };
+
+.redSocial{
+    border: 1px solid red;
+    background-color: rgb(240, 121, 52);
+}
+
+.redsocial--social{
+    @extend.redSocial;
+    border-radius: 10px;
+}
+
+.redsocial--nueva{
+    @extend.redSocial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+.redsocial--mark{
+    @extend.redSocial;
+    border: 3px dashed rgb(255, 42, 42);
+
+}
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;    
+}
+.my_mixin {
+    @include sizes (500px, 50px);
+    background-color: #c54949;
+}

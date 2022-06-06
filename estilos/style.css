@@ -219,4 +219,28 @@ h1 {
 .btn--instagram {
   background-color: #e2b1e4;
 }
+
+.redSocial, .redsocial--social, .redsocial--nueva, .redsocial--mark {
+  border: 1px solid red;
+  background-color: #f07934;
+}
+
+.redsocial--social {
+  border-radius: 10px;
+}
+
+.redsocial--nueva {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+
+.redsocial--mark {
+  border: 3px dashed #ff2a2a;
+}
+
+.my_mixin {
+  height: 50px;
+  width: 500px;
+  background-color: #c54949;
+}
 /*# sourceMappingURL=style.css.map */
