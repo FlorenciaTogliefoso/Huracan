@@ -173,7 +173,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid rgb(109, 107, 107);
   }
 }
 
@@ -199,6 +199,9 @@ footer {
  "galeria galeria galeria" 
  "footer footer footer";
   }
+  footer{
+    background-color: black;
+  }
   a:link {
     color: white;
   }
@@ -217,39 +220,25 @@ h1 {
   color: red;
 }
 
-.btn--twitter {
-  background-color: #6bb0c5;
+.infoDuco{
+  margin-left: 700px;
+}
+h2  {
+  color: rgb(255, 255, 255);
+}
+.asociate{
+  color: rgb(0, 0, 0);
 }
 
-.btn--facebook {
-  background-color: #4b6baf;
+.tittle{
+  margin-left: 500px;
 }
 
-.btn--instagram {
-  background-color: #e2b1e4;
+.infoQuemita{
+  margin-left: 500px;
 }
 
-.redSocial, .redsocial--social, .redsocial--nueva, .redsocial--mark {
-  border: 1px solid red;
-  background-color: #f07934;
-}
-
-.redsocial--social {
-  border-radius: 10px;
-}
-
-.redsocial--nueva {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: medium;
-}
-
-.redsocial--mark {
-  border: 3px dashed #ff2a2a;
-}
-
-.my_mixin {
-  height: 50px;
-  width: 500px;
-  background-color: #c54949;
+.imgQuemita{
+  margin-left: 250px;
 }
 /*# sourceMappingURL=style.css.map */
