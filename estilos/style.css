@@ -101,7 +101,7 @@ footer {
 footer {
   text-align: center;
   padding: 1cm;
-  background-color: #e95050;
+  background-color: #000000;
   margin-bottom: 0;
   margin-top: auto;
 }
@@ -217,21 +217,14 @@ footer {
 }
 
 h1 {
-  color: red;
+  color: rgb(0, 0, 0);
 }
 
-.infoDuco{
-  margin-left: 700px;
-}
 h2  {
   color: rgb(255, 255, 255);
 }
 .asociate{
   color: rgb(0, 0, 0);
-}
-
-.tittle{
-  margin-left: 500px;
 }
 
 .infoQuemita{
@@ -240,5 +233,8 @@ h2  {
 
 .imgQuemita{
   margin-left: 250px;
+}
+.color{
+  color: rgb(0, 0, 0);
 }
 /*# sourceMappingURL=style.css.map */
