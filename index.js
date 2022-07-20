@@ -1,4 +1,4 @@
-alert('Bienvenidos a mi pagina web')
+ alert('Bienvenidos a mi pagina web')
 
  alert("Espero les guste Messi")
 
@@ -125,3 +125,158 @@ const exclamarGritando = (funcion) => {
     return `¡¡¡${funcion}!!!`
 }
 console.log(exclamarGritando(gritar("Aguante Huracan")))
+
+console.log("Huracan")
+
+const nombre  = " Alejo "
+
+function nuevosObjetos (nombre, apellido){
+    this.nombreDePila = nombre; 
+    this.apelliidoDeLaPersona = apellido; 
+}
+
+const persona1 = new nuevosObjetos ("Globo", "Huracan")
+console.log(persona1) 
+
+const personas = [ "Globo", "Huracan"]
+
+console.log(personas)
+
+console.log ( personas [ 0 ] )
+
+console.log ( personas.lenght )
+console.log( "Carola".lenght )
+const  fruta  =  "manzana"
+console.log ( "123120'9310'293013-_-´+´{+´pásodsa´+dp+p65469*-/*-" . longitud )
+console.log ( fruta.length )
+
+console.log(fruta.lenght)
+
+const  frutas  =  [  "plátano" ,  "manzana" ,  "pera" ,  "uva" ,  "melón" , "sandía  "  ]
+
+console.log ( frutas.lenght )
+
+for  ( let  i  =  0 ;  i  <  frutas.lenght;  i ++ ) {
+    console.log ( `En la posición ${ i } , se encuentra: ${ frutas [ i ] } ` )
+} 
+const  arrayRaro  =  [ 1 ,  2 ,  3  , 4 ,  "carola" ,  "Kojima" ,  [ 1 ,  2  , 3 ,  4 ,  5 ] ,  true ,  false ,  { nombre : "Fernando" }  ]
+
+const  arraysConArrays  =  [  [  1 ,  2 ,  3  ] ,  [  4 ,  5 ,  6  ] ,  [  7 ,  8 ,  9  ]  ]
+
+for  ( let i  =  0 ;  i  <  arraysConArrays . longitud  ;  i ++ ) {
+    console.log( arraysConArrays [ i ] )
+
+    for (  let  j  =  0 ;  j  <  arreglosConArrays [ i ] . longitud ;  j ++ ) {
+        console.log ( arraysConArrays [ i ] [ j ] )
+    }
+}
+
+const clientes=  [
+    {
+        nombre : "Carola" ,
+        edad : 27
+    } ,
+    {
+        nombre : "Franco" ,
+        edad : 27
+    } ,
+    {
+        nombre : "Mitchell" ,
+        edad : 27
+    } ,
+    {
+        nombre : "Pablo" ,
+        edad : 27
+    } ,
+    {
+        nombre : "Azucena" ,
+        edad : 27
+    } ,
+    {
+        nombre : "Paula" ,
+        edad : 27
+    } ,
+]
+
+console.log ( clientes )
+
+for  ( let  i  =  0 ;  i  <  clientes . longitud ;  i ++  ) {
+
+    console.log ( clientes [ i ] . nombre )
+}
+
+console.log ( frutas ) 
+console.log ( frutas . push ( "papaya" ) )  
+console.log ( frutas ) 
+
+const  edad  =  20
+let  otraEdad  =  edad
+otraEdad  =  27
+
+const  otrasFrutas  =  frutas
+otrasFrutas.push ( "cereza" )
+console.log ( otrasFrutas )
+console.log ( frutas )
+
+const  nuevasFrutas  =  [... frutas]
+nuevasFrutas.push("tomate")
+
+console.log ( frutas )
+console.log( nuevasFrutas )
+
+nuevasFrutas.unshift ( "mandarina" )
+console.log(nuevasFrutas)
+nuevasFrutas.unshift ( "POMELO" ,  "TOMATE" )
+console.log ( nuevasFrutas )
+
+nuevasFrutas.pop ( )
+console.log( nuevasFrutas ) 
+nuevasFrutas.pop( )
+nuevasFrutas.pop ( )
+nuevasFrutas.pop ( )
+nuevasFrutas.pop ( )
+nuevasFrutas.pop ( )
+console.log ( nuevasFrutas )
+
+
+console.log ( nuevasFrutas )
+nuevasFrutas.reverse ( )
+console.log(  nuevasFrutas )
+
+console.log ( nuevasFrutas.join ( ) )
+console.log ( nuevasFrutas.join ( " " ) )
+console.log ( nuevasFrutas .join( ", " ) )
+console.log ( nuevasFrutas )
+
+const  verduras  =  [  "acelga" ,  "espinaca" ,  "perejil" ,  "cilantro" ,  "lechuga" ]
+const  nuevoArray  =  nuevasFrutas . concat ( verduras )  
+console.log ( nuevoArray )
+
+const  otrasVerduras  =  verduras.slice ( ) 
+const  verdurasQueMeGustan  =  verduras.slice ( 3 ,  4 )  
+
+console.log ( verduras )
+console.log ( verdurasQueMeGustan )
+
+verduras.splice ( 0 ,  0 ,  "zapallito" )
+console.log ( verduras )
+verduras.splice( 3 ,  1 )
+console.log ( verduras )
+
+console.log ( verduras.indexOf ( "zapallito" ) )
+
+console.log ( verduras.includes ( "perejil" ) )
+console.log ( verduras.includes( "cilantro" ) )
+
+const  carteraDeClientes  =  [ ]
+
+carteraDeClientes.push ( "Azucena" )
+
+const  personita  =  {
+    nombre : "Tomás" ,
+    edad : 20
+}
+
+console.log ( carteraDeClientes )
+carteraDeClientes.push( personita )
+console.log ( carteraDeClientes )
