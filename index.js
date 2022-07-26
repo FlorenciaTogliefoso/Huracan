@@ -280,3 +280,184 @@ const  personita  =  {
 console.log ( carteraDeClientes )
 carteraDeClientes.push( personita )
 console.log ( carteraDeClientes )
+
+
+const saludo = saludar()
+
+console.log(saludo)
+
+let edadLegal = 18
+
+const chequearSiEsLegal = (edadDelUsuario, edadDeLegalidad) => {
+
+    if( edadDelUsuario >= edadDeLegalidad ){
+        return "Es mayor de edad"
+    } 
+    else {
+        return "Es menor de edad"
+    }
+}
+
+const comprobarEdadDeAriel = chequearSiEsLegal(40, edadLegal) 
+const comprarEdadCarola = chequearSiEsLegal(27, edadLegal) 
+
+edadLegal = 18 + 20
+
+const comprobarEdadDelQuemero = chequearSiEsLegal(25, edadLegal)
+console.log(comprobarEdadDelQuemero)
+
+const saludoFormal = () => {
+    console.log("Buenas noches querido estudiantes")
+}
+
+const saludoInformal = () => {
+    console.log("ke ase crá")
+}
+
+const comprobarSaludo = (tipoDeSaludo, metodoFormal, metodoInformal) => {
+
+    if (tipoDeSaludo === "formal"){
+        metodoFormal()
+    }
+    else if(tipoDeSaludo === "informal"){
+        metodoInformal()
+    }
+}
+
+const saludoPiola = comprobarSaludo("informal", saludoFormal, saludoInformal)
+
+const estudiantes = ["Mateo", "Mitchell", "Jorge", "Azucena", "Paula", "Malena", "Fernandos"]
+ const numeros = [7, 3, 22, 14, 89, 100, 5]
+ let cliente = [
+    {
+        nombre: "Hezze",
+        edad: 20,
+    },
+    {
+        nombre: "Cristaldo",
+        edad: 25,
+    },
+    {
+        nombre: "Merolla",
+        edad: 27,
+    },
+    {
+        nombre: "Soto",
+        edad: 28,
+    },
+]
+
+estudiantes.forEach(( elementoActual, i) => {
+    console.log(elementoActual)
+})
+
+const numeroMenor = numeros.find((curr) => {
+    return curr > 1 && curr < 10
+})
+
+console.log(numeroMenor)
+
+const clientesMayoresDeEdad = clientes.filter((elemento) => {
+    return elemento.edad > 18
+})
+
+console.log(cliente)
+console.log(clientesMayoresDeEdad)
+console.log(cliente)
+
+console.log(cliente.some( (elemento) => {
+    return elemento.edad < 20
+}))
+
+const numerosMultiplicados = numeros.map((curr) => {
+    return curr * 1000
+})
+
+console.log(numerosMultiplicados)
+console.log(numeros)
+
+const valorTotal = numerosMultiplicados.reduce((acc, elemento) => {
+    return acc + elemento
+})
+
+console.log(valorTotal)
+
+const nombresAHTML = estudiantes.reduce((acc, curr) => {
+    return acc += `
+    <p>${curr}</p>
+    `
+})
+
+console.log(nombresAHTML)
+
+console.log(numeros)
+
+console.log(numeros.sort((a, b) => {
+    return a - b
+}))
+
+console.log(numeros.sort((a, b) => {
+    return b - a
+}))
+
+console.log(cliente)
+
+cliente.sort( (a, b) => {
+
+    if(a.edad > b.edad){
+        return 1
+    }
+    else if( a.edad < b.edad){
+        return -1
+    }
+})
+
+console.log(cliente)
+cliente.sort( (a, b) => {
+
+    if(a.edad > b.edad){
+        return -1
+    }
+    else if( a.edad < b.edad){
+        return 1
+    }
+})
+
+console.log(Math.E) 
+console.log(Math.PI) 
+
+console.log(Math.min(10, 2, 1, -Infinity)) 
+console.log(Math.max(1000, 10000000, 2, Infinity)) 
+
+console.log(Math.sqrt(9)) 
+console.log(Math.sqrt(-1))
+
+console.log(Math.random()) 
+console.log(Math.random() * 1000) 
+
+console.log(Math.random() * 50 + 10) 
+
+console.log(Math.round(Math.random() * 1000))
+console.log(Math.round(9.9))
+console.log(Math.ceil(9.9)) 
+console.log(Math.floor(9.9))
+
+console.log(new Date()) 
+console.log(new Date(1994, 8, 26)) 
+console.log(new Date(1996, 5, 15, 14, 36, 59))
+console.log(new Date("November 26, 2014 10:40"))
+
+
+console.log("November 26", 2014, 14,30)
+const fecha = new Date(2015, 4, 29, 20, 30)
+const dia = fecha.getDay()
+console.log(dia) 
+console.log(fecha.getMonth()) 
+console.log(fecha.getFullYear()) 
+
+
+
+console.log(fecha.toDateString()) 
+console.log(fecha.toLocaleDateString())
+console.log(fecha.toLocaleString())
+console.log(fecha.toTimeString())
