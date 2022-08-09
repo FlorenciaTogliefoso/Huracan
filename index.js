@@ -1,4 +1,4 @@
- alert('Bienvenidos a mi pagina web')
+/* alert('Bienvenidos a mi pagina web')
 
  alert("Espero les guste Messi")
 
@@ -456,8 +456,231 @@ console.log(fecha.getMonth())
 console.log(fecha.getFullYear()) 
 
 
-
 console.log(fecha.toDateString()) 
 console.log(fecha.toLocaleDateString())
 console.log(fecha.toLocaleString())
 console.log(fecha.toTimeString())
+*/
+
+
+console.log(document)
+const container = document.getElementById("container")
+
+const div = document.getElementsByTagName("div")
+
+console.log(div)
+
+const divClase = document.getElementsByClassName("tarjeta")
+console.log(divClase)
+
+const contenedorDivID = document.querySelector("#container")
+
+const contenedorDivClass = document.querySelector(".tarjeta")
+
+const contenedorDivEtiqueta = document.querySelector("div")
+
+console.log(contenedorDivClass, contenedorDivEtiqueta, contenedorDivID)
+
+
+const todosLoscontenedoresDiv = document.querySelectorAll("div")
+
+console.log(todosLoscontenedoresDiv)
+
+
+for(let i = 0; i < todosLoscontenedoresDiv.length; i++){
+    console.log(todosLoscontenedoresDiv[i])
+}
+
+
+const parrafoSaludo = document.querySelector("#saludo")
+console.log(parrafoSaludo)
+
+
+parrafoSaludo.innerText = "le cambio el texto xd"
+
+
+container.innerHTML = `<p>Aguante Huracan</p>`
+
+
+console.log(POKEMON)
+console.log(POKEMON.pokemon)
+
+const debilidadesPokemon = (array, i) => {    
+
+    const debilidadesArray = array[i].weaknesses.reduce((acc, curr) => {
+        return acc + `
+            <p>${curr}</p>
+        `      
+    },"")
+
+    return debilidadesArray
+}
+
+
+const tarjetasHtml = POKEMON.pokemon.reduce((acc, elemento, i) => {   
+
+        return acc = acc + `    
+            <div class="tarjeta">
+                <div class="img-container">
+                    <img src=${elemento.img} alt=${elemento.name}>
+                </div>   
+                <p>
+                    ${elemento.name}
+                </p> 
+                <div>
+                    <p>
+                        Debilidades:
+                    </p>
+                    ${debilidadesPokemon(POKEMON.pokemon, i)}     
+                </div>   
+            </div>
+        `       
+},"")
+/*
+console.log(tarjetasHtml)
+
+const contenedorTarjetas = document.querySelector(".contenedor-tarjetas")
+
+
+console.log(document.forms)
+
+const cuadrado = document.querySelector(".cuadrado-rojo")
+console.log(cuadrado)
+
+
+
+const parrafo = document.querySelector("p")
+const botonVerMas = document.querySelector("#verMas")
+
+
+botonVerMas.addEventListener ("click", () => {
+    parrafo.classList.toggle("ver")
+
+    if (parrafo.classList.contains("ver")){
+        botonVerMas.textContent = "Cerrar"
+    } else {
+        botonVerMas.textContent = "Ver más"
+    }
+})
+
+
+
+cuadrado.onmousemove = () => {
+    console.log("me están clickendo")
+    cuadrado.classList.toggle("cuadrado-azul")
+}
+*/
+
+const inputUsuario = document.getElementById("usuario")
+const inputContrasenia = document.getElementById("contrasenia")
+const formSesion = document.getElementById("form-sesion")
+const newNote = document.getElementById("new-note")
+const logOut = document.getElementById("log-out")
+const main = document.querySelector("main")
+const asideLogin = document.querySelector("aside")
+const formNewNote = document.getElementById("form-new-note")
+const inputFechaNewNote = document.getElementById("input-fecha-newnote")
+const inputTextNewNote = document.getElementById("input-text-newnote")
+const containerNotes = document.getElementById("container-notes")
+const cerrarFormNewNote = document.getElementById("cerrar-newnote")
+
+
+
+const user = {
+    usuario: "Huracan",
+    contrasenia: "2014"
+}
+
+let notas = []
+
+
+
+formSesion.onsubmit = (e) => {
+    e.preventDefault()
+    if ( inputUsuario.value === user.usuario && inputContrasenia.value === user.contrasenia ) {
+        main.style.display = "flex"
+        asideLogin.style.display = "none"
+        localStorage.setItem("user", true)
+    } else {
+        formSesion.reset()
+        alert("El usuario o contraseña es incorrecto")
+    }
+}
+
+function preferenciaDeUsuario () {
+    const tokenLS = localStorage.getItem("user")
+    if ( tokenLS === "true" ) {
+        main.style.display = "flex"
+        asideLogin.style.display = "none"
+    } else if ( tokenLS !== "true" ) {
+        main.style.display = "none"
+        asideLogin.style.display = "flex"
+    }
+}
+
+preferenciaDeUsuario()
+
+logOut.onclick = () => {
+    localStorage.removeItem("user")
+    location.reload() 
+}
+
+
+
+newNote.onclick = () => {
+    formNewNote.style.display = "flex"
+}
+
+cerrarFormNewNote.onclick = () => {
+    formNewNote.style.display = "none"
+}
+
+const notasAlLocalStorage = (array) => {
+    const arrayConvertidoAJSON = JSON.stringify(array)
+    localStorage.setItem("notas", arrayConvertidoAJSON)
+}
+
+const valorDelLocalStorage = (clave) => {
+    const valorDelLs = localStorage.getItem(clave)
+    const parsearValor = JSON.parse(valorDelLs)
+    return parsearValor
+}
+
+
+const pushearObjetos = (fecha, nota, array) => array.push({
+    fechaDeLaNota: fecha,
+    descripcion: nota
+})
+
+const notasAlHtml = (array) => {
+
+    const arrayReducido = array.reduce((acc, curr) => {
+        const fecha = new Date(curr.fechaDeLaNota)
+
+        return acc + `
+            <article class="notita">
+                <h2>
+                    ${fecha.toLocaleDateString()}
+                </h2>
+                <p>
+                    ${curr.descripcion}
+                </p>
+            </article>
+        `
+    },"")
+
+    return arrayReducido
+}
+
+formNewNote.onsubmit = (e) => {
+    e.preventDefault()
+    pushearObjetos(inputFechaNewNote.value, inputTextNewNote.value, notas)
+    notasAlLocalStorage(notas)
+    formNewNote.reset()
+    formNewNote.style.display = "none"
+    containerNotes.innerHTML = notasAlHtml(notas)
+}
+
+let notasTraidasDelLocalStorage = valorDelLocalStorage("notas")
+notas = notasTraidasDelLocalStorage
+ 
