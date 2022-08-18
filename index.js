@@ -585,3 +585,115 @@ const fechaDiezAniosAdelante = DateTime.local(2032, 08, 08)
 const intervaloEntreDosFechas = Interval.fromDateTimes(fechaAhoraYa, fechaDiezAniosAdelante)
 console.log(intervaloEntreDosFechas)
 console.log(intervaloEntreDosFechas.length("day"))
+
+
+
+
+fetch("https://rickandmortyapi.com/api/character")
+.then(respuesta => respuesta.json())
+.then( data => {
+    console.log(data)
+})
+.catch( () => {
+    console.log("malio sal")
+})
+
+fetch("https://rickandmortyapi.com/api/episode")
+.then( respuesta => respuesta.json())
+.then( data => {
+    console.log(data)
+})
+.catch( () => {
+    console.log("malio sal")
+})
+
+console.log("después 1")
+console.log("después 2")
+
+fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+        title: "Clase 15: AJAX Y FETCH",
+        body: "Está media complicada la petición",
+        userId: 540
+    }),
+    headers: {
+        "Content-Type":"application/json"
+    }
+})
+.then(res => res.json())
+.then(data => {
+    console.log(data)
+})
+.catch( () => {
+    console.log("malio sal")
+})
+
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "PUT",
+    body: JSON.stringify({
+        id: 1,
+        title: "Hola mundo",
+        body: "Estamos practicando método put",
+        userId: 1,
+    }),
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+    }
+})
+.then((response) => response.json())
+.then((data) => {
+    console.log(data)
+})
+
+
+fetch ("https://jsonplaceholder.typicode.com/posts/4", {
+    method: "DELETE",
+})
+.then(res => res.json())
+.then(data => console.log(data))
+
+const form = document.querySelector("form")
+const personaje = document.querySelector("#personaje")
+
+form.onsubmit = (e) => {
+    e.preventDefault()
+
+    fetch(`https://rickandmortyapi.com/api/character/${personaje.value}`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+const formPokemon = document.querySelector("#pokemon")
+const inputPokemon = document.querySelector("#pokemones")
+
+formPokemon.onsubmit = (e) => {
+    e.preventDefault()
+
+    fetch(`https://api.pokemontcg.io/v2/cards?q=name:${inputPokemon.value}&pageSize=5&page=1`)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}
+
+const peticionRickAndMorty = () => {
+
+    const urlPersonajes = "https://rickandmortyapi.com/api/character"
+
+    fetch(urlPersonajes)
+    .then( (res) => res.json())
+    .then( (data) => {
+        console.log(data)
+    })
+}
+
+peticionRickAndMorty()
+
+
+const peticionApi = async () => {
+    const respuesta = await fetch("https://rickandmortyapi.com/api/character")
+    const data = await respuesta.json()
+
+    console.log(data)
+}
+
+peticionApi()
